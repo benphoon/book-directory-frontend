@@ -3,7 +3,7 @@ import ResultsInstance from "./ResultsInstance";
 
 
 function Results(props) {
-    console.log(props.data)
+    // console.log(props.data)
     let displayData = props.data
     let displayToggle = props.displayToggle
 
@@ -13,7 +13,7 @@ function Results(props) {
                 <h2>Results</h2>
                 <div className='Results'>
                     {displayData && displayData.map(book =>
-                        <ResultsInstance book={book}/>
+                        <ResultsInstance key={book._id} book={book}/>
                     )}
                 </div>
             </div>

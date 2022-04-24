@@ -20,27 +20,15 @@ const Home = () => (
 
 
 function App() {
-
+// These variables define the results of search, submit, update or delete and will display the output from API
   const [data, setData] = useState([]);
   const [displayResults, setDisplayResults] = useState(false)
 
-  const handleSearch = (result) => {
+  const handleResults = (result) => {
     setData(result)
     setDisplayResults(true)
     console.log(result)
   }
-
-  // const handleSubmit = () => {
-
-  // }
-
-  // const handleUpdate = () => {
-
-  // }
-
-  // const handleDelete = () => {
-
-  // }
 
   const clearData = (e) => {
     setData([])
@@ -53,9 +41,9 @@ function App() {
         <Home />
         <Nav clearData={clearData} />
         <Routes>
-          <Route path='/search' element={<Search handleSearch={handleSearch} />} />
-          <Route path='/submit' element={<Submit />} />
-          <Route path='/update' element={<Update />} />
+          <Route path='/search' element={<Search handleResults={handleResults} />} />
+          <Route path='/submit' element={<Submit handleResults={handleResults}/>} />
+          <Route path='/update' element={<Update handleResults={handleResults}/>} />
         </Routes>
         <Results
           data={data}

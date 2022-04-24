@@ -5,7 +5,7 @@ function Search(props) {
         fetch('http://localhost:3010/books')
             .then(response => response.json())
             .then(result => {
-                props.handleSearch(result)
+                props.handleResults(result)
                 // console.log(result)
             })
             .catch(error => {

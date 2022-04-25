@@ -1,12 +1,11 @@
 // This component will handle search query sent to back end.
 
 function Search(props) {
-    const retrieve = () => {
+    const searchHandler = () => {
         fetch('http://localhost:3010/books')
             .then(response => response.json())
             .then(result => {
                 props.handleResults(result)
-                // console.log(result)
             })
             .catch(error => {
                 console.log(error)
@@ -25,7 +24,7 @@ function Search(props) {
                 <input placeholder='...'></input>
             </div>
             <button>Search</button>
-            <button onClick={retrieve}>Show All</button>
+            <button onClick={searchHandler}>Show All</button>
         </div>
     )
 }

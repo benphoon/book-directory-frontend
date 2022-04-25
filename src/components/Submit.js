@@ -1,13 +1,12 @@
 // This component will handle submission query sent to back end (POST).
 import { useState } from 'react';
 
-
 function Submit(props) {
     const [title, setTitle] = useState('');
     const [year, setYear] = useState();
     const [author, setAuthor] = useState('');
 
-    const submission = () => {
+    const submitHandler = () => {
         const requestOptions = {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -32,7 +31,7 @@ function Submit(props) {
                     <input className="author" placeholder="Author's Name" onChange={event => setAuthor(event.target.value)}></input>
                     <input className="year" placeholder="Year Published" onChange={event => setYear(event.target.value)}></input>
                 </form>
-                <button onClick={submission}>Submit</button>
+                <button onClick={submitHandler}>Submit</button>
             </div>
             <div className="Submission-result">
 

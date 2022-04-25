@@ -1,4 +1,4 @@
-// This component will handle update query sent to back end (PATCH, DELETE).
+// This component will handle update query sent to back end (PATCH).
 
 function Update() {
 

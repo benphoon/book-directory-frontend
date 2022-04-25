@@ -13,6 +13,9 @@ function Nav({clearData}) {
                 <Link onClick={clearData} className='default-link' to='/update'>
                     <li>Update</li>
                 </Link>
+                <Link onClick={clearData} className='default-link' to='/delete'>
+                    <li>Delete</li>
+                </Link>
             </div>
         </nav>
     )

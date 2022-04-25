@@ -166,6 +166,35 @@ nav .nav-container {
   font-size: 1em;
 }
 
+/* Delete Component */
+.Delete-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  height: 27vh;
+  width: 100%;
+
+  border: 2px solid black;
+}
+
+.Delete-container input {
+  margin: 1em
+}
+
+.Delete-buttons {
+  display: flex;
+}
+
+.Delete-buttons button {
+  width: 15vw;
+  
+  margin: 1em;
+  padding: .5em;
+
+  font-size: 1em;
+}
+
 /* Results Component */
 .Results-container {
   display: flex;
